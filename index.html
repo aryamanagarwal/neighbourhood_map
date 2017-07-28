@@ -1,0 +1,22 @@
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="style.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAWDVqdtxsvPSNmWWaeHQi9QsGMXwQW2a0&v=3&callback=initMap"></script>	
+	<title>My neighbourhood map</title>
+</head>
+<body>
+	<div id="mySidenav" class="sidenav">
+		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times</a>
+		<h1>Explore my neighbourhood</h1>
+			<p><input type="text" name="textforfilter" data-bind="value: filter, valueUpdate: 'afterkeydown'"></p>
+            <ul data-bind="foreach: items">
+                <li data-bind="text: title,click:$parent.openInfo, visible: visiblity"></li>
+            </ul>
+	</div>
+    <img src="hamburger_icon.svg" onclick="openNav()">
+	<div id="map"></div>
+	<script src="knockout-3.2.0.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+</body>
+</html>
