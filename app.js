@@ -72,7 +72,7 @@ var locations = [
           // In case the status is OK, which means the pano was found, compute the
           // position of the streetview image, then calculate the heading, then get a
           // panorama from that and set the options
-          function getStreetView(data, status) {
+          var getStreetView = function(data, status) {
             if (status == google.maps.StreetViewStatus.OK) {
               var nearStreetViewLocation = data.location.latLng;
               var heading = google.maps.geometry.spherical.computeHeading(
@@ -92,7 +92,7 @@ var locations = [
               infowindow.setContent('<div>' + marker.title + '</div>' +
                 '<div>No Street View Found</div>');
             }
-          }
+          };
 
 
           // Use streetview service to get the closest streetview image within
@@ -101,11 +101,11 @@ var locations = [
           // Open the infowindow on the correct marker.
           infowindow.open(map, marker);
         }
-      };
+      }
 //implementing the viewmodal of knockout
 var viewModel = function(){
 		var self=this;
-		this.filter= ko.observable("")
+		this.filter= ko.observable("");
 	
 	self.items = ko.observableArray([]);
 
@@ -164,5 +164,5 @@ self.items().forEach(function(loc) {
 
 };
 ko.applyBindings(new viewModel());
-};
+}
 	
