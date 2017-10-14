@@ -10,7 +10,11 @@ function closeNav() {
 var map;
 //will store the markers of locations
 var markers = [];
-
+//this is the error function for google maps api
+function gm_authFailure(){
+	alert("Map failed to load!");
+	console.log("map failed to load!");
+}
 //array of locations
 var locations = [{
 		title: "Mall near my home in UP.",
@@ -21,18 +25,18 @@ var locations = [{
 		bool: true
 	},
 	{
-		title: "Men's hostel g - block(My block) ",
+		title: "Kutch desert (hut view)",
 		location: {
-			lat: 12.9737467,
-			lng: 79.1596992
+			lat: 23.758878,
+			lng: 69.511124
 		},
 		bool: true
 	},
 	{
-		title: 'Enzo(eatery)',
+		title: 'Traditional Bengali home',
 		location: {
-			lat: 12.9726155,
-			lng: 79.1588798
+			lat: 22.533466,
+			lng: 88.349108
 		},
 		bool: true
 	},
