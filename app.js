@@ -10,10 +10,9 @@ function closeNav() {
 var map;
 //will store the markers of locations
 var markers = [];
-//this is the error function for google maps api
-function gm_authFailure(){
-	alert("Map failed to load!");
-	console.log("map failed to load!");
+//deals with error in google maps api call
+function gerror(){
+	alert("Error in loading google maps api!");
 }
 //array of locations
 var locations = [{
@@ -41,26 +40,26 @@ var locations = [{
 		bool: true
 	},
 	{
-		title: 'SJT (Main education building for CSE,IT)',
+		title: 'Nandan Gurudwara,Madhya Pradesh',
 		location: {
-			lat: 12.9713315,
-			lng: 79.1635564
+			lat: 19.152107,
+			lng: 77.317845
 		},
 		bool: true
 	},
 	{
-		title: 'TT (Main education building for EEE,ECE)',
+		title: 'Taj Mahal',
 		location: {
-			lat: 12.9709444,
-			lng: 79.1594751
+			lat: 27.173992,
+			lng: 78.041993
 		},
 		bool: true
 	},
 	{
-		title: 'Anna Auditorium',
+		title: 'Raj Ghat, Varanasi',
 		location: {
-			lat: 12.9696704,
-			lng: 79.1557084
+			lat: 25.326028,
+			lng: 83.034883
 		},
 		bool: true
 	},
