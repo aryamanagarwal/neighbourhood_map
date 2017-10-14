@@ -6,7 +6,7 @@ It includes highlighted locations that i like to visit.
 The neighborhood map incorporates a variety of data points.The libraries and frameworks being used are knockoutJs and Jquery.The api's being used are google maps api, openweather api.  
 
 ## How to run the app
-Open index.html
+Open index.html.
 If you want to host it locally you can download and use fenix.(There is no need of hosting it as such.)
 
 ## Issues
